@@ -367,11 +367,10 @@ class Chart
      */
     public function getChartAxisY()
     {
-        if ($this->yAxis !== null) {
-            return $this->yAxis;
+        if ($this->yAxis == null) {
+            $this->yAxis = new Axis();
         }
-
-        return new Axis();
+        return $this->yAxis;
     }
 
     /**
@@ -381,11 +380,10 @@ class Chart
      */
     public function getChartAxisX()
     {
-        if ($this->xAxis !== null) {
-            return $this->xAxis;
+        if ($this->xAxis == null) {
+            $this->xAxis = new Axis();
         }
-
-        return new Axis();
+        return $this->xAxis;
     }
 
     /**
